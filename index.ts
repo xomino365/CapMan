@@ -20,6 +20,12 @@ Schedule.Inject(TimelineViews, TimelineMonth, Resize, DragAndDrop);
 let data: Object[] = <Object[]>(
   extend([], (dataSource as any).zooEventsData, null, true)
 );
+  let template: string = '<div class="tooltip-wrap">' +
+        '<div class="image ${EventType}"></div>' +
+        '<div class="content-area"><div class="name">${Subject}</></div>' +
+        '${if(City !== null && City !== undefined)}<div class="city">${City}</div>${/if}' +
+        '<div class="time">From&nbsp;:&nbsp;${StartTime.toLocaleString()} </div>' +
+        '<div class="time">To&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;${EndTime.toLocaleString()} </div></div></div>';
 let scheduleObj: Schedule = new Schedule({
   width: '100%',
   height: '650px',
@@ -27,11 +33,12 @@ let scheduleObj: Schedule = new Schedule({
   views: ['TimelineDay', 'TimelineWeek', 'TimelineMonth'],
   currentView: 'TimelineWeek',
   rowAutoHeight: true,
-  startHour: "01:00",
-  endHour: "10:00",
+  startHour: '01:00',
+  endHour: '10:00',
+  showWeekend: false,
   timeScale: {
     enable: true,
-    interval: 240,
+    interval: 30,
     slotCount: 1
   },
   workHours: {
@@ -50,7 +57,9 @@ let scheduleObj: Schedule = new Schedule({
         null,
         true
       )
-    )
+    ),
+            enableTooltip: true,
+            tooltipTemplate: template
   },
   group: { resources: ['Categories'] },
   resources: [
