@@ -1256,14 +1256,6 @@
         "ProjectId": 3,
         "TaskId": 2
     }, {
-        "Id": 49,
-        "Subject": "Project Preview",
-        "StartTime": "2018-04-04T12:30:00.000Z",
-        "EndTime": "2018-04-04T14:30:00.000Z",
-        "IsAllDay": false,
-        "ProjectId": 3,
-        "TaskId": 1
-    }, {
         "Id": 50,
         "Subject": "Cross-browser testing",
         "StartTime": "2018-04-25T08:30:00.000Z",
