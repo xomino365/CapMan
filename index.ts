@@ -73,7 +73,13 @@ let scheduleObj: Schedule = new Schedule({
         { text: 'Robert', id: 3, groupId: 2, color: '#ea7a57' },
         { text: 'Micheal', id: 5, groupId: 3, color: '#df5286' },
         { text: 'Steven', id: 2, groupId: 1, color: '#7fa900' },
-        { text: 'Smith', id: 4, groupId: 2, color: '#5978ee' }
+        { text: 'Smith', id: 4, groupId: 2, color: '#5978ee' },
+        { text: 'Mark', id: 6, groupId: 2, color: '#5978ee' },
+        { text: 'Sarah', id: 7, groupId: 2, color: '#5978ee' },
+        { text: 'Fred', id: 8, groupId: 2, color: '#5978ee' },
+        { text: 'Jenny', id: 9, groupId: 2, color: '#5978ee' },
+        { text: 'Susan', id: 10, groupId: 2, color: '#5978ee' },
+        { text: 'Peter', id: 11, groupId: 2, color: '#5978ee' }
       ],
       textField: 'text',
       idField: 'id',
